@@ -1,0 +1,12 @@
+from flask import *  
+  
+app = Flask(name)  
+ 
+@app.route('/cookie')  
+def cookie():  
+    res = make_response("<h1>cookie is set</h1>")  
+    res.set_cookie('foo','bar')  
+    return res  
+  
+if name == 'main':  
+    app.run(debug = True)
